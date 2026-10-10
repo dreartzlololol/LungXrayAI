@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "arduino_pipeline",
+			"path": "arduino_pipeline"
+		}
+	],
+	"settings": {}
+}

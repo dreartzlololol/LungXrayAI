@@ -1,0 +1,9 @@
+venv/
+.idea/
+__pycache__/
+Data/
+Dataset_v4/
+models/
+*.h5
+*.zip
+protoc-33.2-win64/
