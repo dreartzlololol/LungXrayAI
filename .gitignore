@@ -1,9 +1,23 @@
+# Virtual Environments
 venv/
-.idea/
-__pycache__/
-Data/
+env/
+.env
+
+# Datasets and heavy data
+raw_archives/
+Dataset_v3/
 Dataset_v4/
-models/
-*.h5
+Dataset_split/
+Tf/
 *.zip
-protoc-33.2-win64/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

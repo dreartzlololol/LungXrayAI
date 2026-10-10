@@ -4,6 +4,14 @@ import tensorflow as tf
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
+import ctypes
+
+try:
+    # Tell Windows this is a unique app so it uses our custom icon in the taskbar
+    myappid = 'dreartz.lungxray.ai.1'
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+except Exception:
+    pass
 
 MODEL_PATH = "models/densenet121_xray_3class.h5"
 CLASSES = ["Normal", "Tuberculosis", "Pneumonia"]
@@ -13,6 +21,11 @@ model = tf.keras.models.load_model(MODEL_PATH)
 root = tk.Tk()
 root.title("AI Lung X-ray")
 root.geometry("720x760")
+
+try:
+    root.iconbitmap("icon.ico")
+except Exception as e:
+    print(f"Warning: Could not load app icon - {e}")
 
 video_label = tk.Label(root)
 video_label.pack()
